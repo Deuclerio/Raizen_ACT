@@ -1,4 +1,4 @@
-- Crie uma aplicação que contém os seguintes pontos:
+Crie uma aplicação que contém os seguintes pontos:
  
  
 (1) Cadastro de cliente (Nome, E-mail, Data de Nascimento, CEP)
