@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UPD8.Data.Api.props" />
+</Project>

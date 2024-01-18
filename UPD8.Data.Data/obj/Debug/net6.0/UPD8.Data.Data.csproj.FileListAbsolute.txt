@@ -1,0 +1,25 @@
+C:\Users\deucl\OneDrive\Área de Trabalho\MVC_CRUD\MVC_CRUD\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.AssemblyReference.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\MVC_CRUD\MVC_CRUD\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deucl\OneDrive\Área de Trabalho\MVC_CRUD\MVC_CRUD\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfoInputs.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\MVC_CRUD\MVC_CRUD\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfo.cs
+C:\Users\deucl\OneDrive\Área de Trabalho\MVC_CRUD\MVC_CRUD\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.CoreCompileInputs.cache
+C:\Users\deucl\Downloads\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.AssemblyReference.cache
+C:\Users\deucl\Downloads\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deucl\Downloads\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfoInputs.cache
+C:\Users\deucl\Downloads\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfo.cs
+C:\Users\deucl\Downloads\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.CoreCompileInputs.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\bin\Debug\net6.0\UPD8.Data.Data.deps.json
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\bin\Debug\net6.0\UPD8.Data.Data.dll
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\bin\Debug\net6.0\UPD8.Data.Data.pdb
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\bin\Debug\net6.0\UPD8.Data.Domain.dll
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\bin\Debug\net6.0\UPD8.Data.Domain.pdb
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.AssemblyReference.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfoInputs.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.AssemblyInfo.cs
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.CoreCompileInputs.cache
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.csproj.CopyComplete
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.dll
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\refint\UPD8.Data.Data.dll
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\UPD8.Data.Data.pdb
+C:\Users\deucl\OneDrive\Área de Trabalho\Teste_ACT\MVC_CRUD-main\MVC_CRUD-main\Cadastros_Basicos\Código\UPD8.Data.Data\obj\Debug\net6.0\ref\UPD8.Data.Data.dll

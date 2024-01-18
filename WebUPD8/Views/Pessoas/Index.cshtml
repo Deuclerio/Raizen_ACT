@@ -1,0 +1,76 @@
+﻿@model IEnumerable<UPD8.Data.Domain.Entity.PessoaEntity>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Pessoas</h1>
+
+<p>
+    <a asp-action="Create">Criação Pessoa</a>
+</p>
+
+
+<form asp-action="Pesquisar" method="post">
+
+    <input type="text" name="Nome" id="Nome" placeholder="Filtrar por Nome">
+    <input type="text" name="Email" id="Email" placeholder="Filtrar por E-mail">
+
+
+    <td>
+        <button type="submit">Filtrar</button>
+
+    </td>
+
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+
+            <th>
+                Email
+            </th>
+
+            <th>
+                Data Nascimento
+            </th>
+
+            <th>
+                Cep
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
