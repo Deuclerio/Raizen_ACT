@@ -5,7 +5,7 @@
 }
 
 
-<h4>Pessoa</h4>
+<h2>Pessoa</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -26,27 +26,111 @@
             </div>
 
 
-
-            @Html.LabelFor(model => model.DataNascimento)
-            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control"} })
-            @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
-
-            <div class="form-group">
-                <label asp-for="Cep" class="control-label"></label>
-                <input asp-for="Cep" class="form-control" />
-                <span asp-validation-for="Cep" class="text-danger"></span>
+            <div>
+                @Html.LabelFor(model => model.DataNascimento)
+                @Html.EditorFor(model => model.DataNascimento, "{0:dd-MM-yyyy}", new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
             </div>
+
+            <div>
+                @Html.LabelFor(model => model.Cep)
+                @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @class = "form-control", @name = "cep", @id = "cepInput" } })
+                <span asp-validation-for="Cep" class="text-danger"></span>
+
+
+               <br />
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" class="form-control" id="logradouro" name="logradouro" disabled />
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" class="form-control" id="bairro" name="bairro" disabled />
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" disabled />
+
+                <label for="estado">Estado:</label>
+                <input type="text" class="form-control" id="estado" name="estado" disabled />
+
+            </div>
+
             <br />
             <div class="form-group">
-                <input type="submit" value="Update" class="btn btn-primary" /> |
+                <input type="submit" value="Update" class="btn btn-success" /> |
                 <a asp-action="Index">Voltar</a>
             </div>
         </form>
+
     </div>
 </div>
 
 
 @section Scripts {
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var cepInput = document.getElementById('cepInput');
+
+            cepInput.addEventListener('input', function (event) {
+                var inputValue = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+                var formattedValue = formatCEP(inputValue);
+
+                cepInput.value = formattedValue;
+            });
+
+            function formatCEP(value) {
+                var formattedValue = value;
+
+                if (value.length > 5) {
+                    formattedValue = value.substring(0, 5) + '-' + value.substring(5, 8);
+                }
+
+                return formattedValue;
+            }
+        });
+
+
+        $(document).ready(function () {
+
+            if (document.getElementById("cepInput") && document.getElementById("cepInput").value.trim() !== '') {          
+                realizarBuscaPorCep(document.getElementById("cepInput").value);
+
+                var cepValue = cepInput.value.replace(/\D/g, '');
+
+                if (cepValue.length > 5) {
+                    cepValue = cepValue.substring(0, 5) + '-' + cepValue.substring(5, 8);
+                }
+
+                cepInput.value = cepValue;
+            }
+
+            $('#cepInput').blur(function () {
+                var cepDigitado = $(this).val();
+                realizarBuscaPorCep(cepDigitado);
+            });
+
+
+            function realizarBuscaPorCep(cep) {
+                $.ajax({
+                    url: '/Pessoas/PesquisarCep',
+                    type: 'GET',
+                    data: { cep: cep },
+                    success: function (data) {
+                        // Preencher os campos automaticamente
+                        $('#logradouro').val(data.logradouro);
+                        $('#bairro').val(data.bairro);
+                        $('#cidade').val(data.localidade);
+                        $('#estado').val(data.uf);
+                    },
+                    error: function () {
+                        console.error('Erro ao buscar por CEP.');
+                    }
+                });
+            }
+        });
+    </script>
+
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A4tK9ASjAtx5ctr5xkC9c2Vj5FuHNujloop7deO6HOQJmEnaGm4cJFqcgQxxzEjWeizeYE2/Wc1JpUWpwLHFMA==",
+  "dgSpecHash": "y5Hq+EsmMHU/HMXCd6WM9DGYnlheQ7wNAwHFgEfE2mJrcCYuE+nkjuCebT3FTJWZrHTqwsF6IAPoG9blcCHXjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\deucl\\OneDrive\\Área de Trabalho\\Teste_ACT\\MVC_CRUD-main\\MVC_CRUD-main\\Cadastros_Basicos\\Código\\UPD8.Data.Service\\UPD8.Data.Service.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\deucl\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\deucl\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\deucl\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\deucl\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\deucl\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\deucl\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\deucl\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

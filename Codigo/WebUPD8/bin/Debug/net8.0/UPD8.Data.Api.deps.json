@@ -2373,6 +2373,7 @@
       "UPD8.Data.Service/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "Newtonsoft.Json": "13.0.3",
           "UPD8.Data.Domain": "1.0.0"
         },
         "runtime": {

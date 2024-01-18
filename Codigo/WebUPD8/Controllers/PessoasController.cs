@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
-using UPD8.Data.Domain.DTOs;
-using UPD8.Data.Domain.DTOs.Request;
 using UPD8.Data.Domain.Entity;
-using UPD8.Data.Domain.Filter;
 using UPD8.Data.Domain.Interfaces.Services;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace UPD8.Data.Api.Controllers
 {
@@ -44,6 +39,20 @@ namespace UPD8.Data.Api.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> PesquisarCep(string cep)
+        {
+            try
+            {
+                return Ok(await _iPessoaService.ConsultarCep(cep));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
         [HttpGet("Edit/{id}")]
         public async Task<IActionResult> Edit(int id)
         {
@@ -62,8 +71,6 @@ namespace UPD8.Data.Api.Controllers
         {
             try
             {
-                var teste = await _iPessoaService.GetAsync(id);
-
                 return View(await _iPessoaService.GetAsync(id));
             }
             catch (Exception ex)

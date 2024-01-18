@@ -6,32 +6,100 @@
 
 
 <div>
-    <h4>Pessoa</h4>
+    <h2>Pessoa</h2>
     <hr />
     <dl class="row">
-        <dd class="col-sm-10">
-            @Html.DisplayNameFor(model => model.Nome): 
-            @Html.DisplayFor(model => model.Nome)
+        <dd class="col-md-3">
+            <strong>
+                @Html.DisplayNameFor(model => model.Nome):
+            </strong>
+            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { disabled = "disabled", @class = "form-control" } })
         </dd>
-        <dd class="col-sm-10">
-            @Html.DisplayNameFor(model => model.Email):
-            @Html.DisplayFor(model => model.Email)
+        <dd class="col-md-3">
+            <strong>
+                @Html.DisplayNameFor(model => model.Email):
+            </strong>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { disabled = "disabled", @class = "form-control" } })
 
         </dd>
-        <dd class="col-sm-10">
-            @Html.DisplayNameFor(model => model.DataNascimento):
-            @Html.DisplayFor(model => model.DataNascimento)
+        <dd class="col-md-3">
+            <strong>
+                @Html.DisplayNameFor(model => model.DataNascimento):
+            </strong>
+            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { disabled = "disabled", @class = "form-control"} })
 
         </dd>
 
-        <dd class="col-sm-10">
-            @Html.DisplayNameFor(model => model.Cep):
-            @Html.DisplayFor(model => model.Cep)
-
+        <dd class="col-md-3">
+            <strong>
+                @Html.DisplayNameFor(model => model.Cep):
+            </strong>
+            @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { disabled = "disabled", @class = "form-control", @name = "cep", @id = "cepInput" } })
         </dd>
+
+        <dd class="col-md-3">
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" class="form-control" id="logradouro" name="logradouro" disabled />
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" class="form-control" id="bairro" name="bairro" disabled />
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" disabled />
+
+                <label for="estado">Estado:</label>
+                <input type="text" class="form-control" id="estado" name="estado" disabled />
+        </dd>
+
+
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index" class="btn btn-dark">Voltar</a>
 </div>
+@section Scripts {
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            if (document.getElementById("cepInput") && document.getElementById("cepInput").value.trim() !== '') {
+                realizarBuscaPorCep(document.getElementById("cepInput").value);
+
+                var cepValue = cepInput.value.replace(/\D/g, '');
+
+                if (cepValue.length > 5) {
+                    cepValue = cepValue.substring(0, 5) + '-' + cepValue.substring(5, 8);
+                }
+
+                cepInput.value = cepValue;
+            }
+
+
+            function realizarBuscaPorCep(cep) {
+                $.ajax({
+                    url: '/Pessoas/PesquisarCep',
+                    type: 'GET',
+                    data: { cep: cep },
+                    success: function (data) {
+                        // Preencher os campos automaticamente
+                        $('#logradouro').val(data.logradouro);
+                        $('#bairro').val(data.bairro);
+                        $('#cidade').val(data.localidade);
+                        $('#estado').val(data.uf);
+                    },
+                    error: function () {
+                        console.error('Erro ao buscar por CEP.');
+                    }
+                });
+            }
+        });
+    </script>
+
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
