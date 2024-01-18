@@ -1,0 +1,29 @@
+
+create database Raizen_ACT
+
+
+USE [Raizen_ACT]
+GO
+
+/****** Object:  Table [dbo].[Pessoa]    Script Date: 17/01/2024 21:35:38 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Pessoa](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [nvarchar](100) NULL,
+	[Email] [nvarchar](100) NULL,
+	[Dt_Nascimento] [date] NULL,
+	[Cep] [nvarchar](8) NULL,
+ CONSTRAINT [PK_Pessoa] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
